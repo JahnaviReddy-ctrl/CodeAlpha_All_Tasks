@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flashcard Quiz App - CodeAlpha</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Flashcard Quiz App</h1>
+    <button id="toggle-theme">🌓</button>
+  </header>
+
+  <main>
+    <!-- Page 1: Flashcard Viewer -->
+    <section class="page">
+      <div class="flashcard" id="flashcard">
+        <div class="front" id="question">Click "Show Answer"</div>
+        <div class="back" id="answer">Answer will appear here</div>
+      </div>
+      <div class="controls">
+        <button onclick="prevCard()">⬅ Previous</button>
+        <button onclick="toggleAnswer()">👁 Show Answer</button>
+        <button onclick="nextCard()">Next ➡</button>
+      </div>
+    </section>
+
+    <!-- Page 2: Add Flashcard -->
+    <section class="page">
+      <h2>Add Flashcard</h2>
+      <input type="text" id="newQuestion" placeholder="Enter question" />
+      <input type="text" id="newAnswer" placeholder="Enter answer" />
+      <button onclick="addFlashcard()">➕ Add Card</button>
+    </section>
+
+    <!-- Page 3: Edit/Delete Flashcards -->
+    <section class="page" id="edit-section">
+      <h2>Edit/Delete Flashcards</h2>
+      <ul id="card-list"></ul>
+    </section>
+
+    <!-- Page 4: About -->
+    <section class="page">
+      <h2>About This App</h2>
+      <p>This Flashcard Quiz App is developed for the CodeAlpha Internship Program.</p>
+      <p>It allows users to create and study flashcards in a scrollable, interactive layout.</p>
+      <p>Made with HTML, CSS, and JavaScript with animations and a dark/light toggle feature.</p>
+      <p>Contact: codealpha@app.dev | GitHub: @yourusername</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
