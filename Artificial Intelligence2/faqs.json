@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What is your name?",
+    "answer": "I am your friendly FAQ chatbot!"
+  },
+  {
+    "question": "What is AI?",
+    "answer": "AI stands for Artificial Intelligence, the simulation of human intelligence by machines."
+  },
+  {
+    "question": "How does this chatbot work?",
+    "answer": "It uses simple NLP techniques to match your questions with predefined answers."
+  },
+  {
+    "question": "Who developed this chatbot?",
+    "answer": "This chatbot was built by a passionate developer."
+  }
+]
