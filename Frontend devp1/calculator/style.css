@@ -1,0 +1,311 @@
+/* Base styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.page {
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Light Theme */
+body.light-theme {
+  background: #ffeef4;
+  color: #333;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background: #2d0a29;
+  color: #fff;
+}
+
+/* Main Title */
+.main-title {
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 2px;
+  display: inline-block;
+  background: linear-gradient(90deg, #ff4b91, #ff9a8b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 10px rgba(255, 105, 180, 0.4);
+}
+
+/* Calculator */
+.calculator {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: #fff0f6;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+#display {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  text-align: right;
+  padding-right: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  height: 50px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #ffc8dd;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #fda4c6;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+/* History */
+.history {
+  text-align: left;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.history li {
+  font-size: 14px;
+  padding: 6px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Settings Page */
+#settings-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0f6;
+  flex-direction: column;
+}
+
+.settings-wrapper {
+  text-align: center;
+}
+
+#bigSettingsBtn {
+  font-size: 2rem;
+  padding: 20px 40px;
+  border-radius: 10px;
+  background: #ff4b91;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+#bigSettingsBtn:hover {
+  background: #e73580;
+  transform: scale(1.05);
+}
+
+#settingsOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#settingsOptions button {
+  background: #ffc8dd;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#settingsOptions button:hover {
+  background: #fda4c6;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Dark theme */
+body.dark-theme #display,
+body.dark-theme .calculator {
+  background: #4d1647;
+  color: white;
+}
+
+body.dark-theme button {
+  background: #b63678;
+  color: white;
+}
+
+body.dark-theme button:hover {
+  background: #da5b9e;
+}
+
+body.dark-theme #settings-page {
+  background: #3d0e3f;
+}
+/* Full page structure */
+.page {
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Settings page */
+#settings-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff0f6;
+}
+
+/* Very Big Gear */
+#gearIcon {
+  font-size: 8rem;
+  cursor: pointer;
+  animation: rotate 4s linear infinite;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Settings options under gear */
+#settingsOptions {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+#settingsOptions button {
+  padding: 10px 20px;
+  font-size: 26px;
+  background: #ffc8dd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#settingsOptions button:hover {
+  background: #fda4c6;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Dark mode for settings page */
+body.dark-theme #settings-page {
+  background: #3d0e3f;
+}
+
+body.dark-theme #settingsOptions button {
+  background: #b63678;
+  color: white;
+}
+
+body.dark-theme #settingsOptions button:hover {
+  background: #da5b9e;
+}
+/* Page 3: About & Contact */
+#about-page {
+  background: #ffeef4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 20px;
+}
+
+.about-wrapper {
+  max-width: 600px;
+  text-align: center;
+}
+
+#bigBow {
+  font-size: 8rem;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-top: 10px;
+  color: #d63384;
+}
+
+.about-description {
+  font-size: 26px;
+  color: #444;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.contact-info {
+  font-size: 25px;
+  margin-top: 20px;
+  line-height: 1.4;
+}
+
+/* Dark theme for About page */
+body.dark-theme #about-page {
+  background: #3d0e3f;
+  color: white;
+}
+
+body.dark-theme .section-title {
+  color: #ff70b2;
+}
+
+body.dark-theme .about-description,
+body.dark-theme .contact-info {
+  color: #f0dce8;
+}
+#themeToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}

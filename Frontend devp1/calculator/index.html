@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculator.int</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-theme">
+
+  <!-- Theme Toggle Button -->
+  <button id="themeToggle">🌈</button>
+
+  <!-- Calculator Page -->
+  <section class="page" id="calculator-page">
+    <h1 class="main-title">Calculator.int</h1>
+
+    <div class="calculator">
+      <input type="text" id="display" disabled />
+
+      <div class="keypad">
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="deleteLast()">⌫</button>
+        <button onclick="append('%')">%</button>
+        <button onclick="append('/')">/</button>
+
+        <button onclick="append('(')">(</button>
+        <button onclick="append(')')">)</button>
+        <button onclick="append('**')">^</button>
+        <button onclick="append('*')">*</button>
+
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button onclick="append('-')">-</button>
+
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button onclick="append('+')">+</button>
+
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="calculate()">=</button>
+
+        <button onclick="append('0')" class="zero">0</button>
+        <button onclick="append('.')">.</button>
+        <button onclick="negate()">±</button>
+        <button onclick="squareRoot()">√</button>
+      </div>
+
+      <div class="history">
+        <h3>History</h3>
+        <ul id="historyList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Settings Page -->
+  <section class="page" id="settings-page">
+    <div class="settings-wrapper">
+      <div id="gearIcon">⚙️</div>
+
+      <div id="settingsOptions" class="hidden">
+        <h2>⚙️ App Settings</h2>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+        <button onclick="clearHistory()">Clear History</button>
+        <button onclick="clearDisplay()">Reset Calculator</button>
+        <button onclick="showAbout()">About This App</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Third Page – About & Contact -->
+  <section class="page" id="about-page">
+    <div class="about-wrapper">
+      <div id="bigBow">🎀</div>
+
+      <h2 class="section-title">About</h2>
+      <h2 class="section-title">Contact</h2>
+
+      <p class="about-description">
+        Welcome to <strong>Calculator.int</strong> 💗<br>
+        Crafted with love, color, and creativity.<br>
+        Designed for cute hearts and clear minds.<br>
+        Smart features, smooth scrolling, and a pink vibe!<br>
+        Use it to calculate, smile, and enjoy every tap!<br>
+        Thanks for stopping by – you're adorable too 🥰
+      </p>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> support@calculator.int</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Address:</strong> Pink Street, Tech City, India</p>
+      </div>
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.454185491139!2d78.3875!3d17.4369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93d7b6f545fd%3A0xf4fdb738b2b2fa1a!2sHyderabad%20India!5e0!3m2!1sen!2sin!4v1689141043385!5m2!1sen!2sin"
+        width="100%" height="250" style="border:0; border-radius: 10px; margin-top: 20px;"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <script>
+    const themeToggleBtn = document.getElementById("themeToggle");
+
+    themeToggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-theme");
+      document.body.classList.toggle("light-theme");
+
+      // Change button icon
+      themeToggleBtn.textContent = document.body.classList.contains("dark-theme")
+        ? "🌙"
+        : "🌈";
+    });
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
